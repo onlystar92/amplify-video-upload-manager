@@ -1,0 +1,32 @@
+{
+    "backdev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-streamvidoesmanage-backdev-112810-authRole",
+            "UnauthRoleArn": "arn:aws:iam::153977681257:role/amplify-streamvidoesmanage-backdev-112810-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::153977681257:role/amplify-streamvidoesmanage-backdev-112810-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-streamvidoesmanage-backdev-112810-deployment",
+            "UnauthRoleName": "amplify-streamvidoesmanage-backdev-112810-unauthRole",
+            "StackName": "amplify-streamvidoesmanage-backdev-112810",
+            "StackId": "arn:aws:cloudformation:us-east-1:153977681257:stack/amplify-streamvidoesmanage-backdev-112810/8318a2f0-9ada-11eb-a19c-0a8267cebc39",
+            "AmplifyAppId": "d16bkjlv0s39cz"
+        },
+        "categories": {
+            "function": {
+                "S3Trigger726c9129": {
+                    "deploymentBucketName": "amplify-streamvidoesmanage-backdev-112810-deployment",
+                    "s3Key": "amplify-builds/S3Trigger726c9129-6a4d58743144712b6b77-build.zip"
+                }
+            },
+            "auth": {
+                "videomanagercognito": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d16bkjlv0s39cz",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

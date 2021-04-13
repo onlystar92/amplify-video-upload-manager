@@ -1,0 +1,7 @@
+const AMPLIFY_CONFIG = {
+  AMPLIFY_UPLOADED_FOLDER: 'uploaded/',
+  AMPLIFY_CONVERTED_FOLDER: 'public/converted/',
+  AMPLIFY_CONVERTED_M3U8_PATH: '/Default/HLS/'
+}
+
+export {AMPLIFY_CONFIG}

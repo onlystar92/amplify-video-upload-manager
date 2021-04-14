@@ -92,7 +92,7 @@ function App() {
 
   const handleClick = (url) => {
     const fileName = Utils.getFileName(url);
-    const filePath = AMPLIFY_CONFIG.AMPLIFY_CONVERTED_FOLDER + fileName + AMPLIFY_CONFIG.AMPLIFY_CONVERTED_M3U8_PATH + fileName + '.m3u8';
+    const filePath = encodeURI(AMPLIFY_CONFIG.AMPLIFY_CONVERTED_FOLDER + fileName + AMPLIFY_CONFIG.AMPLIFY_CONVERTED_M3U8_PATH + fileName + '.m3u8');
     setVideoUrl(`https://${awsmobile.aws_user_files_s3_bucket}.s3.amazonaws.com/${filePath}`);
   };
 

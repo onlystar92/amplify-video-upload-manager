@@ -7,7 +7,7 @@ import uuid
 import boto3
 import datetime
 import random
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote_plus
 import logging
 
 from botocore.client import ClientError
@@ -21,6 +21,7 @@ def lambda_handler(event, context):
     assetID = str(uuid.uuid4())
     sourceS3Bucket = event['Records'][0]['s3']['bucket']['name']
     sourceS3Key = event['Records'][0]['s3']['object']['key']
+    sourceS3Key = unquote_plus(sourceS3Key)
     sourceS3 = 's3://'+ sourceS3Bucket + '/' + sourceS3Key
     destinationS3 = 's3://' + os.environ['DestinationBucket']
     mediaConvertRole = os.environ['MediaConvertRole']
@@ -29,7 +30,6 @@ def lambda_handler(event, context):
     statusCode = 200
     jobs = []
     job = {}
-
     jobMetadata = {}
     jobMetadata['assetID'] = assetID
     jobMetadata['application'] = application
